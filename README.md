@@ -1,39 +1,36 @@
-# Moshii
-<h2 align="left">Hello Hackers👋!  I am Moshii and I'm a Father | Pentester | SOC analyst | Malware Analyst .. from Egypt</h2>
+<h2 align="left">Hello Hackers👋!  I am<b>Moshii</b> </h2>
 
-###
+<h1 align="center">Hello Hackers!! , I'm Mohammed Moshii <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
+<p align="center">
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=%23C8BE25&size=25&center=true&vCenter=true&width=600&height=100&lines=Penetration+tester;Hacker;SOC+Analyst;Computer+Science+Student;2%+THM;CTF+Player;Malware+Analyst;">
+</p>
+<br>
 
-<div align="center">
-  <img height="200" src="https://ibb.co/Fsrttqd"  />
-</div>
+<p align="center"> 
+	
+	
 
-###
+</p>
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg" height="30" alt="redhat logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="cplusplus logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="30" alt="bash logo"  />
-  <img width="12" />
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=black&style=for-the-badge" height="30" alt="powershell logo"  />
-</div>
+	
+## <picture><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnT9g85DlahYmGjcv_qfG5oUNNYM4QWcywDA&s?raw=true" width = 50px></picture> About me
 
-###
+<picture> <img align="right" src="https://www.bleepstatic.com/content/hl-images/2023/10/02/Hacker.jpg?raw=true" width = 500px></picture>
 
-<div align="left">
-  <a href="https://www.youtube.com/@hack-with-moshii" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=Moshii&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
-  </a>
-  <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
-  <a href="https://www.linkedin.com/in/mohammed-m0shii/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
-  </a>
-  <a href="https://t.me/Cyb3r_S3curity_Moshii" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="telegram logo"  />
-  </a>
-</div>
+<br><br>
 
-###
+- Who am I : father | Penetration Tester | Hacker | SOC Analyst | Malware Analyst.
+- Learning : I am a `Student` at [Faculty of Post Graduate for Statistical Research "Computer Science"](https://csds.cu.edu.eg).
+- Certificates : CEH | CSA | Practical Malware Analysis.
+- I Hacked : NASA | tesla | LinkedIn | HackerOne | Hack The Box | many Websites.
+- Big Things : Hall Of fame "NASA".
+<br>
+
+
+ </br>
+	
+## 🐍 A Snake Eating my Contributions Graph
+	
+<p align = "center">
+	<img src = "https://github.com/7oSkaaa/7oSkaaa/blob/output/github-contribution-grid-snake.svg?" alt = "Snake Game"/>
+</p>
