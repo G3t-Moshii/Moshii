@@ -1,0 +1,23 @@
+{% extends "users/base.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<h2>Available Courses</h2>
+<div class="list-group">
+    {% for course in courses %}
+        <a href="{% url 'courses:course_detail' course.pk %}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ course.title }}</h5>
+                <small>{{ course.created_at|date:"M d, Y" }}</small>
+            </div>
+            <p class="mb-1">{{ course.description|truncatewords:30 }}</p>
+            {% if course.is_premium %}
+                <span class="badge badge-warning">Premium</span>
+            {% endif %}
+        </a>
+    {% empty %}
+        <p>No courses available yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

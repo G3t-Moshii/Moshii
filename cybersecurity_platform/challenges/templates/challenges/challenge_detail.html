@@ -1,0 +1,55 @@
+{% extends "users/base.html" %}
+
+{% block title %}{{ challenge.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ challenge.title }}</h2>
+<p><strong>Course:</strong> <a href="{% url 'courses:course_detail' challenge.course.pk %}">{{ challenge.course.title }}</a></p>
+<p><strong>Description:</strong></p>
+<p>{{ challenge.description }}</p>
+<p><strong>Difficulty:</strong> {{ challenge.get_difficulty_display }}</p>
+<p><strong>Type:</strong> {{ challenge.get_challenge_type_display }}</p>
+<p><strong>Points:</strong> {{ challenge.points }}</p>
+
+<hr>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+{% if completed_successfully %}
+    <div class="alert alert-success">
+        You have successfully completed this challenge on {{ completion_date|date:"M d, Y, P" }}.
+        <br>
+        <a href="{% url 'certificates:download_certificate' challenge.pk %}" class="btn btn-info btn-sm mt-2">Download Certificate</a>
+    </div>
+{% else %}
+    <h4>Solve Challenge:</h4>
+    {% if challenge.challenge_type == 'flag' %}
+        <form method="post" action="{% url 'challenges:challenge_detail' challenge.pk %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit Flag</button>
+        </form>
+    {% elif challenge.challenge_type == 'quiz' %}
+        <p>Quiz interface will be here.</p>
+        {# Quiz questions and options would be rendered here #}
+        {# <form method="post" action="{% url 'challenges:challenge_detail' challenge.pk %}"> #}
+        {#    {% csrf_token %} #}
+        {#    {{ form.as_p }} #}
+        {#    <button type="submit" class="btn btn-primary">Submit Answers</button> #}
+        {# </form> #}
+    {% elif challenge.challenge_type == 'lab' %}
+        <p>Lab environment details and access instructions will be here.</p>
+        {# May involve external links or embedded lab environments #}
+        {# For lab, submission might be different or manual #}
+    {% endif %}
+{% endif %}
+
+<hr>
+<a href="{% url 'challenges:challenge_list' %}" class="btn btn-secondary mt-3">Back to Challenge List</a>
+<a href="{% url 'courses:course_detail' challenge.course.pk %}" class="btn btn-info mt-3">Back to Course</a>
+
+{% endblock %}

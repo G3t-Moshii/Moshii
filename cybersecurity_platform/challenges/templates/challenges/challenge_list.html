@@ -1,0 +1,21 @@
+{% extends "users/base.html" %}
+
+{% block title %}Challenges{% endblock %}
+
+{% block content %}
+<h2>Available Challenges</h2>
+<div class="list-group">
+    {% for challenge in challenges %}
+        <a href="{% url 'challenges:challenge_detail' challenge.pk %}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ challenge.title }}</h5>
+                <small>Course: {{ challenge.course.title }}</small>
+            </div>
+            <p class="mb-1">{{ challenge.description|truncatewords:30 }}</p>
+            <small>Difficulty: {{ challenge.get_difficulty_display }} | Type: {{ challenge.get_challenge_type_display }} | Points: {{ challenge.points }}</small>
+        </a>
+    {% empty %}
+        <p>No challenges available yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

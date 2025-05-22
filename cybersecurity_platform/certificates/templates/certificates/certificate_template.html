@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4; /* Optional: for better viewing if HTML is rendered directly */
+        }
+        .certificate-container {
+            width: 800px; /* Standard A4-ish width */
+            height: 565px; /* Maintain aspect ratio */
+            border: 10px solid #4a90e2;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative; /* For potential absolute positioning of elements */
+        }
+        .title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .recipient-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d9534f; /* A highlight color */
+            margin-bottom: 30px;
+        }
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .challenge-name {
+            font-style: italic;
+            font-weight: bold;
+        }
+        .date {
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+        .signature-area {
+            margin-top: 50px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="title">Certificate of Completion</div>
+        <div class="subtitle">This certificate is proudly presented to</div>
+        <div class="recipient-name">{{ user_name }}</div>
+        <div class="message">
+            For successfully completing the challenge:
+            <br>
+            <span class="challenge-name">"{{ challenge_name }}"</span>
+        </div>
+        <div class="date">
+            Date of Completion: {{ completion_date|date:"F j, Y" }}
+        </div>
+        <div class="signature-area">
+            Cybersecurity Platform
+        </div>
+    </div>
+</body>
+</html>

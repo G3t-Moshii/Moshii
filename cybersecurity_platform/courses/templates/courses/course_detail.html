@@ -1,0 +1,56 @@
+{% extends "users/base.html" %}
+
+{% block title %}{{ course.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ course.title }}</h2>
+<p>{{ course.description }}</p>
+
+{% if course.is_premium %}
+    <span class="badge badge-warning">Premium Course</span>
+{% endif %}
+
+{% if course.video_url %}
+    <div class="embed-responsive embed-responsive-16by9 mt-4 mb-4">
+        <iframe class="embed-responsive-item" src="{{ course.video_url }}" allowfullscreen></iframe>
+    </div>
+{% elif course.uploaded_video %}
+    <div class="mt-4 mb-4">
+        <video width="100%" controls>
+            <source src="{{ course.uploaded_video.url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+{% endif %}
+
+<hr>
+
+<h4>Challenges in this Course ({{ completed_challenges_count }}/{{ total_challenges }} completed):</h4>
+{% if total_challenges > 0 %}
+    <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: {% widthratio completed_challenges_count total_challenges 100 %}%" aria-valuenow="{% widthratio completed_challenges_count total_challenges 100 %}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+{% endif %}
+
+{% if challenges_with_status %}
+    <ul class="list-group">
+        {% for item in challenges_with_status %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'challenges:challenge_detail' item.challenge.pk %}">{{ item.challenge.title }}</a> 
+                <span>
+                    ({{ item.challenge.get_difficulty_display }})
+                    {% if item.is_completed %}
+                        <span class="badge badge-success ml-2">Completed</span>
+                    {% else %}
+                        <span class="badge badge-secondary ml-2">Pending</span>
+                    {% endif %}
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No challenges available for this course yet.</p>
+{% endif %}
+
+<a href="{% url 'courses:course_list' %}" class="btn btn-secondary mt-3">Back to Course List</a>
+{% endblock %}
